@@ -35,11 +35,10 @@ AdminName = os.getenv("FlarumAdminName")
 AdminPassword = os.getenv("FlarumAdminPassword")
 FlarumLink = os.getenv("FlarumLink")
 logging.warning("请勿打开CDN/WAF的JS防护！")
-logging.error(f"链接：{FlarumLink}")
+print(f"链接：{FlarumLink}")
 
 @app.route('/', methods=['GET','POST'])
 def index():
-    # 这里定义你想要返回的数据
     return {
         "status":"200",
         "server":"Run"
